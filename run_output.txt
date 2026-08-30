@@ -1,0 +1,81 @@
+First five records:
+            passengers
+time                  
+1949-01-01         112
+1949-02-01         118
+1949-03-01         132
+1949-04-01         129
+1949-05-01         121
+
+Dataset shape: (144, 1)
+
+Missing values: 0
+Figure(1000x500)
+
+Training records: 132
+Testing records: 12
+
+Model summary:
+                               SARIMAX Results                                
+==============================================================================
+Dep. Variable:             passengers   No. Observations:                  132
+Model:                 ARIMA(2, 1, 2)   Log Likelihood                -607.782
+Date:                Sun, 30 Aug 2026   AIC                           1225.563
+Time:                        17:48:17   BIC                           1239.939
+Sample:                    01-01-1949   HQIC                          1231.405
+                         - 12-01-1959                                         
+Covariance Type:                  opg                                         
+==============================================================================
+                 coef    std err          z      P>|z|      [0.025      0.975]
+------------------------------------------------------------------------------
+ar.L1          1.6660      0.024     68.561      0.000       1.618       1.714
+ar.L2         -0.9294      0.022    -41.536      0.000      -0.973      -0.886
+ma.L1         -1.8324      0.032    -56.857      0.000      -1.896      -1.769
+ma.L2          0.9581      0.032     29.998      0.000       0.895       1.021
+sigma2       605.1588     73.622      8.220      0.000     460.863     749.454
+===================================================================================
+Ljung-Box (L1) (Q):                   0.45   Jarque-Bera (JB):                 0.78
+Prob(Q):                              0.50   Prob(JB):                         0.68
+Heteroskedasticity (H):               6.52   Skew:                             0.19
+Prob(H) (two-sided):                  0.00   Kurtosis:                         3.01
+===================================================================================
+
+Warnings:
+[1] Covariance matrix calculated using the outer product of gradients (complex-step).
+
+Evaluation results
+MAE : 41.83
+MSE : 3049.56
+RMSE: 55.22
+Figure(1000x500)
+
+Next 12-month forecast:
+  Month  Forecasted Passengers (thousands)
+1961-01                             439.85
+1961-02                             465.30
+1961-03                             500.67
+1961-04                             535.97
+1961-05                             561.69
+1961-06                             571.31
+1961-07                             562.97
+1961-08                             539.73
+1961-09                             508.53
+1961-10                             478.15
+1961-11                             456.75
+1961-12                             449.70
+Figure(1100x500)
+
+Project completed successfully.
+
+Spreadsheet runtime warmup failed during python startup
+Traceback (most recent call last):
+  File "/tmp/tmp.L2TH2Y5coc/artifact_tool_v2-2.8.22/artifact_tool/patches/warm_spreadsheet_runtime_on_startup.py", line 26, in warm_spreadsheet_runtime_on_startup
+  File "/tmp/tmp.L2TH2Y5coc/artifact_tool_v2-2.8.22/artifact_tool/spreadsheet_warmup.py", line 785, in warm_spreadsheet_runtime
+  File "/tmp/tmp.L2TH2Y5coc/artifact_tool_v2-2.8.22/artifact_tool/spreadsheet_warmup.py", line 720, in _warm_feature_flows
+  File "/tmp/tmp.L2TH2Y5coc/artifact_tool_v2-2.8.22/artifact_tool/spreadsheet_warmup.py", line 704, in _warm_collaboration_flows
+  File "/tmp/tmp.L2TH2Y5coc/artifact_tool_v2-2.8.22/artifact_tool/generated/interface/models.py", line 32317, in hydrate_crdt_from_proto
+  File "/tmp/tmp.L2TH2Y5coc/artifact_tool_v2-2.8.22/artifact_tool/rpc/remote.py", line 749, in __call__
+  File "/tmp/tmp.L2TH2Y5coc/artifact_tool_v2-2.8.22/artifact_tool/rpc/client.py", line 150, in call
+artifact_tool.rpc.client.RemoteError: hydrateCrdtFromProto requires an empty collaborative document.
+/opt/pyvenv/lib/python3.13/site-packages/statsmodels/base/model.py:607: ConvergenceWarning: Maximum Likelihood optimization failed to converge. Check mle_retvals
+  warnings.warn("Maximum Likelihood optimization failed to "

@@ -1,0 +1,14 @@
+THIRANEX SUBMISSION GUIDE
+
+Project title:
+Predictive Analytics Using Historical Data
+
+Upload/submit the project files generated in this folder. If Thiranex asks for a single file, use the ZIP file.
+
+Recommended submission:
+1. Upload predictive_analytics_thiranex.zip
+2. If a description box is available, use:
+
+"I developed a time-series forecasting project using historical airline passenger data. The project includes data preprocessing, trend visualization, ARIMA model training, model evaluation using MAE, MSE and RMSE, and a 12-month future forecast."
+
+3. If screenshots are requested, use the three PNG graphs included in the ZIP.

@@ -1,0 +1,55 @@
+PREDICTIVE ANALYTICS USING HISTORICAL DATA
+
+1. Introduction
+Predictive analytics uses previous observations to estimate what may happen in the future. In this project, historical monthly airline passenger data is used to build a time-series forecasting model.
+
+2. Objective
+The main objective is to build a predictive model that can learn the pattern in historical passenger numbers and forecast future passenger demand.
+
+3. Dataset
+The AirPassengers dataset is used. It contains monthly international airline passenger totals from January 1949 to December 1960. The passenger values are recorded in thousands.
+
+4. Tools and Technologies
+Python
+Pandas
+NumPy
+Matplotlib
+Statsmodels
+Scikit-learn
+
+5. Data Preprocessing
+The date values were converted into a proper monthly datetime index. Passenger values were converted to numeric values and missing records were checked. The dataset was then kept at monthly frequency.
+
+6. Exploratory Analysis
+A line graph was created to observe the historical trend. The graph shows that the number of passengers generally increased over the years. There is also a repeating seasonal pattern during different months.
+
+7. Train-Test Split
+The last 12 months of the dataset were kept aside as test data. The remaining observations were used for training the model. This gives a simple way to compare the forecast with values that are already known.
+
+8. Model Used
+ARIMA (2,1,2) was selected for forecasting. ARIMA is a time-series model that uses past observations and differences in the series to model and forecast future values.
+
+9. Model Evaluation
+The model is evaluated using:
+- MAE (Mean Absolute Error): average absolute difference between actual and predicted values.
+- MSE (Mean Squared Error): average squared prediction error.
+- RMSE (Root Mean Squared Error): square root of MSE and expressed in the same unit as the original data.
+
+The program prints the actual evaluation values when it is run. This avoids manually entering or changing results.
+
+10. Forecasting
+After evaluation, the ARIMA model is fitted again using the complete historical dataset. It then forecasts passenger numbers for the following 12 months.
+
+11. Results and Observations
+The historical data shows a clear upward trend in airline passengers. The passenger numbers also show repeated seasonal movement. The ARIMA model is able to capture a useful part of the time-series pattern and produce future estimates.
+
+12. Conclusion
+This project demonstrates how historical data can be cleaned, analyzed and used for prediction. Time-series forecasting can help organizations estimate future demand and make better decisions. The model can be improved further by comparing different ARIMA parameters or using a seasonal model such as SARIMA.
+
+13. Files Included
+predictive_analytics.py
+README.md
+forecast_12_months.csv
+historical_trend.png
+actual_vs_predicted.png
+future_forecast.png
